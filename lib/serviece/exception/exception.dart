@@ -1,6 +1,3 @@
-/**
- * Created by ibruzz_17 on 16-12-2021.
- */
 
 class InterNetConnectionException {
   final String message;
