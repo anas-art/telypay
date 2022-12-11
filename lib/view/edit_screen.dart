@@ -294,7 +294,7 @@ class _EditPageState extends State<EditPage> {
 
                         final product = ProductModel(price: double.parse(price),name: name,noInStock: int.parse(stock));
 
-                        edvm.editdatas(context,product);
+                        edvm.onpressSubmit(context,product);
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
 
                       },

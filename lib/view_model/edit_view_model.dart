@@ -36,12 +36,12 @@ class EditViewModel extends ChangeNotifier {
 
   }
 
-  editdatas(BuildContext context,ProductModel productModel) {
+  onpressSubmit(BuildContext context,ProductModel productModel) {
 
     final abc= Provider.of<HomeViewModel>(context, listen: false);
-   abc.productList[index!] = productModel;
+    abc.productList[index!] = productModel;
 
-   final list = context.read<HomeViewModel>().productList;
+   final list = abc.productList;
     notifyListeners();
 
     Navigator.pushReplacement(context,

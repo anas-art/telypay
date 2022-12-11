@@ -107,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ListTile(
           leading: const Icon(Icons.search),
           title: TextField(
-            controller: hmv.controller,
+            controller: hmv.search_controller,
             decoration: const InputDecoration(
                 hintText: 'Search', border: InputBorder.none),
             onChanged: hmv.onSearchTextChanged,
@@ -230,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 _buildSearchBox(hmvm),
                 Expanded(
-                    child: hmvm.searchResult.length != 0 || hmvm.controller.text.isNotEmpty
+                    child: hmvm.search_controller.text.isNotEmpty
                         ? _buildSearchResults(hmvm)
                         : _builuserlist(hmvm)),
 

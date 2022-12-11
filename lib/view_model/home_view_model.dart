@@ -60,8 +60,7 @@ class HomeViewModel extends ChangeNotifier{
 
 
   onSearchTextChanged(String text) async {
-    if(search_controller.text.isNotEmpty){
-      print("NOT EMPTYYYYYYYYYYYYYYYYYYYYY");
+    if(controller.text.isNotEmpty || text.isNotEmpty){
       isSearchingKeyword = true;
       _searchResult = [];
       notifyListeners();
@@ -74,10 +73,10 @@ class HomeViewModel extends ChangeNotifier{
       }
       );
     }
-    else if(text=="" || search_controller.text.isEmpty){
-      print("EMPTYYYYYYYYYYYYYYYYYYYYY");
+    else if(text=="" || text.isEmpty){
 
-      return _product_list;
+      _searchResult = _product_list;
+      notifyListeners();
     }
 
 
